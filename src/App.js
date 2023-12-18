@@ -1,4 +1,5 @@
 function App() {
+  document.title = "Calculator with React";
   return (
     <div className="calculator-grid">
       <div className="output">

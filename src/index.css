@@ -16,7 +16,7 @@ body {
 .calculator-grid {
   display: grid;
   padding: 30px;
-  background: rgba(199, 192, 180, 0.795);
+  background: rgba(199, 192, 180, 0.925);
   border-radius: 15px;
   box-shadow: 6px 6px 15px #333;
   grid-template-columns: repeat(4, 100px);
