@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(layered-waves-haikei.svg);
+}
+
+.calculator-grid {
+  display: grid;
+  padding: 30px;
+  background: rgba(199, 192, 180, 0.795);
+  border-radius: 15px;
+  box-shadow: 6px 6px 15px #333;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px;
+}
+
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+button {
+  cursor: pointer;
+  border: solid 1px black;
+  border-radius: 6px;
+  margin: 1px;
+  font-size: 24px;
+  background-color: #333;
+  color: white;
+}
+
+button:hover {
+  background-color: #333333ee;
+}
+
+button:active {
+  background-color: #333333a9;
 }
